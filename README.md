@@ -1,3 +1,4 @@
 # kbus
 
-Start locally using: heroku local
+Start locally using: 
+> heroku local
