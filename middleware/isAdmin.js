@@ -1,10 +1,8 @@
 const HttpStatus = require('http-status-codes');
 
-const config = require('config');
-
 module.exports = function(req, res, next) {
   try {
-    if (req.user.email == config.get('admin')) {
+    if (req.user.email == process.env.ADMIN) {
       next();
       return;
     }

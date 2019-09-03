@@ -1,5 +1,0 @@
-{
-  "mongoURI": "mongodb+srv://kuser:gubus@kazbegibus-h57nm.mongodb.net/test?retryWrites=true&w=majority",
-  "jwtSecret": "gubus",
-  "admin": "admin@localhost.com"
-}

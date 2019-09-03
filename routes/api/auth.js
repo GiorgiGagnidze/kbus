@@ -7,7 +7,6 @@ const HttpStatus = require('http-status-codes');
 
 const User = require('../../models/User');
 const auth = require('../../middleware/auth');
-const config = require('config');
 
 // @route    GET api/auth
 // @desc     Test route
@@ -65,7 +64,7 @@ router.post(
 
         jwt.sign(
             payload,
-            config.get('jwtSecret'),
+            process.env.JWT_SECRET,
             { expiresIn: 360000 },
             (err, token) => {
             if (err) throw err;
