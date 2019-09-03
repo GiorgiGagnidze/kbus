@@ -1,6 +1,9 @@
 {
   "name": "kbus",
   "version": "1.0.0",
+  "engines": {
+    "node": "12.8.0"
+  },
   "description": "Coach service",
   "main": "server.js",
   "scripts": {
