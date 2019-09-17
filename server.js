@@ -20,6 +20,7 @@ app.use('/api/users', require('./routes/api/users'));
 app.use('/api/auth', require('./routes/api/auth'));
 app.use('/api/locations', require('./routes/api/locations'));
 app.use('/api/bus-routes', require('./routes/api/busRoutes'));
+app.use('/api/feedbacks', require('./routes/api/feedbacks'));
 
 // Serve static assets in production
 if (process.env.NODE_ENV === 'production') {

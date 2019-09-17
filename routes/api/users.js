@@ -19,7 +19,7 @@ router.post(
     check('surname', 'Surname is required')
       .not()
       .isEmpty(),
-    check('email', 'Please include a valid email').isEmail(),
+    check('email', 'Please provide a valid email').isEmail(),
     check(
       'password',
       'Please enter a password with 6 or more characters'
@@ -33,7 +33,7 @@ router.post(
     const errors = validationResult(req);
 
     if (!errors.isEmpty()) {
-      return res.status(400).json({ errors: errors.array() });
+      return res.status(HttpStatus.BAD_REQUEST).json({ errors: errors.array() });
     }
 
     const { name, surname, email, password, phone } = req.body;
